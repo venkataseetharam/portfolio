@@ -50,11 +50,20 @@ const Hero = () => {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            <Button size="lg" className="hero-gradient text-white hover:opacity-90 transition-opacity" asChild>
-              <a href="#projects">View My Work</a>
+            <Button 
+              size="lg" 
+              className="hero-gradient text-white hover:opacity-90 transition-opacity"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View My Work
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10" asChild>
-              <a href="#contact">Get In Touch</a>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-primary/20 hover:bg-primary/10"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Get In Touch
             </Button>
           </div>
           
